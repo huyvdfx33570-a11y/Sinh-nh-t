@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <audio id="bgm" autoplay loop>
+    <source src="C:\Users\HN STORE\Documents\Codex\2026-05-16\files-mentioned-by-the-user-snaptik\Khúc Hát Mừng Sinh Nhật (Instrumental).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+    const audio = document.getElementById("bgm");
+
+    audio.volume = 0.5;
+
+    const playMusic = async () => {
+        try {
+            await audio.play();
+        } catch (err) {
+            document.addEventListener(
+                "click",
+                () => {
+                    audio.play();
+                },
+                { once: true }
+            );
+        }
+    };
+
+    playMusic();
+});
+</script>
     <main class="birthday-page">
       <section class="scene scene-gift active" aria-label="Cảnh 1 - Hộp quà">
         <div class="soft-cloud cloud-one"></div>
