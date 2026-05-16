@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Gift Story</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="birthday-page">
+      <section class="scene scene-gift active" aria-label="Cảnh 1 - Hộp quà">
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="floating-hearts" aria-hidden="true"></div>
+
+        <button class="gift-button" type="button" aria-label="Nhấn vào hộp quà">
+          <span class="gift-lid"></span>
+          <span class="gift-bow bow-left"></span>
+          <span class="gift-bow bow-right"></span>
+          <span class="gift-ribbon-x"></span>
+          <span class="gift-ribbon-y"></span>
+          <span class="gift-box"></span>
+        </button>
+
+        <p class="tap-text">Nhấn vào hộp quà</p>
+      </section>
+
+      <section class="scene scene-cake" aria-label="Cảnh 2 - Bánh sinh nhật ảnh 3D">
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="floating-hearts" aria-hidden="true"></div>
+        <div class="confetti-layer" aria-hidden="true"></div>
+
+        <header class="title">
+          <h1>Bánh sinh nhật handmade cho THÚY </h1>
+          <span>Kéo bánh để xoay. Sau <strong class="cake-countdown">10</strong>s sẽ tự mở thư.</span>
+        </header>
+
+        <div class="scene-wrap">
+          <div class="scene-hint">Drag to rotate</div>
+
+          <div class="cake-world" id="cakeWorld">
+            <div class="cake-3d" id="cake3d">
+              <div class="candle-3d" aria-hidden="true">
+                <span class="flame"></span>
+                <span class="wick"></span>
+              </div>
+
+              <div class="tier-3d top-tier">
+                <div class="top-disc">
+                  <img src="assets/anh-1.jpg" alt="" />
+                  <img src="assets/anh-2.jpg" alt="" />
+                  <img src="assets/anh-3.jpg" alt="" />
+                  <img src="assets/anh-4.jpg" alt="" />
+                </div>
+
+                <div class="inside-photos" aria-hidden="true">
+                  <img src="assets/anh-5.jpg" alt="" />
+                  <img src="assets/anh-6.jpg" alt="" />
+                  <img src="assets/anh-7.jpg" alt="" />
+                </div>
+
+                <!-- Tầng trên: thay ảnh bằng cách bỏ file vào assets hoặc sửa src. -->
+                <div class="panel" style="--angle: 0deg"><span>anh-1.jpg</span><img src="assets/anh-1.jpg" alt="Ảnh 1" /></div>
+                <div class="panel" style="--angle: 45deg"><span>anh-2.jpg</span><img src="assets/anh-2.jpg" alt="Ảnh 2" /></div>
+                <div class="panel" style="--angle: 90deg"><span>anh-3.jpg</span><img src="assets/anh-3.jpg" alt="Ảnh 3" /></div>
+                <div class="panel" style="--angle: 135deg"><span>anh-4.jpg</span><img src="assets/anh-4.jpg" alt="Ảnh 4" /></div>
+                <div class="panel" style="--angle: 180deg"><span>anh-5.jpg</span><img src="assets/anh-5.jpg" alt="Ảnh 5" /></div>
+                <div class="panel" style="--angle: 225deg"><span>anh-6.jpg</span><img src="assets/anh-6.jpg" alt="Ảnh 6" /></div>
+                <div class="panel" style="--angle: 270deg"><span>anh-7.jpg</span><img src="assets/anh-7.jpg" alt="Ảnh 7" /></div>
+                <div class="panel" style="--angle: 315deg"><span>anh-8.jpg</span><img src="assets/anh-8.jpg" alt="Ảnh 8" /></div>
+              </div>
+
+              <div class="tier-3d bottom-tier">
+                <div class="top-disc">
+                  <img src="assets/anh-9.jpg" alt="" />
+                  <img src="assets/anh-10.jpg" alt="" />
+                  <img src="assets/anh-11.jpg" alt="" />
+                  <img src="assets/anh-12.jpg" alt="" />
+                </div>
+
+                <div class="inside-photos" aria-hidden="true">
+                  <img src="assets/anh-13.jpg" alt="" />
+                  <img src="assets/anh-14.jpg" alt="" />
+                  <img src="assets/anh-15.jpg" alt="" />
+                  <img src="assets/anh-16.jpg" alt="" />
+                </div>
+
+                <!-- Tầng dưới: thêm/bớt ảnh tại đây. -->
+                <div class="panel" style="--angle: 0deg"><span>anh-9.jpg</span><img src="assets/anh-9.jpg" alt="Ảnh 9" /></div>
+                <div class="panel" style="--angle: 36deg"><span>anh-10.jpg</span><img src="assets/anh-10.jpg" alt="Ảnh 10" /></div>
+                <div class="panel" style="--angle: 72deg"><span>anh-11.jpg</span><img src="assets/anh-11.jpg" alt="Ảnh 11" /></div>
+                <div class="panel" style="--angle: 108deg"><span>anh-12.jpg</span><img src="assets/anh-12.jpg" alt="Ảnh 12" /></div>
+                <div class="panel" style="--angle: 144deg"><span>anh-13.jpg</span><img src="assets/anh-13.jpg" alt="Ảnh 13" /></div>
+                <div class="panel" style="--angle: 180deg"><span>anh-14.jpg</span><img src="assets/anh-14.jpg" alt="Ảnh 14" /></div>
+                <div class="panel" style="--angle: 216deg"><span>anh-15.jpg</span><img src="assets/anh-15.jpg" alt="Ảnh 15" /></div>
+                <div class="panel" style="--angle: 252deg"><span>anh-16.jpg</span><img src="assets/anh-16.jpg" alt="Ảnh 16" /></div>
+                <div class="panel" style="--angle: 288deg"><span>anh-17.jpg</span><img src="assets/anh-17.jpg" alt="Ảnh 17" /></div>
+                <div class="panel" style="--angle: 324deg"><span>anh-18.jpg</span><img src="assets/anh-18.jpg" alt="Ảnh 18" /></div>
+              </div>
+
+              <div class="cake-shadow" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="angle-controls" aria-label="Điều khiển xoay bánh">
+          <button type="button" data-rotate="-35">‹</button>
+          <button type="button" data-tilt="-8">▲</button>
+          <button type="button" data-reset>Reset</button>
+          <button type="button" data-tilt="8">▼</button>
+          <button type="button" data-rotate="35">›</button>
+        </div>
+
+        <p class="auto-note">Thư chúc sẽ tự mở sau khi bánh quay đủ 10 giây.</p>
+      </section>
+
+      <section class="scene scene-letter" aria-label="Cảnh 3 - Thư chúc đang gõ chữ">
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="floating-hearts" aria-hidden="true"></div>
+
+        <div class="card-pin"><span>♥</span></div>
+
+        <article class="birthday-card">
+          <button class="close-card" type="button" aria-label="Đóng thư">×</button>
+
+          <div class="typed-letter" aria-live="polite"></div>
+
+          <!-- Sửa nội dung thư ở đây. Script sẽ gõ từng dòng. -->
+          <div class="letter-source">
+            <p>Vậy là đến ngày đặc biệt của em rồi nè 💖</p>
+            <p>Chúc mừng sinh nhật cô gái siêu đáng yêu của anh.</p>
+            <p>Anh mong tuổi mới sẽ mang đến cho em xinh đẹp, luôn hạnh phúc, luôn ngủ đủ giấc và ngày nào cũng cười thật nhiều.</p>
+            <p>Anh biết đôi lúc anh còn hơi khờ, hơi nhây và cũng hay làm em giận nữa 🥺. Nhưng cảm ơn em vì vẫn luôn ở bên anh, chịu đựng anh, quan tâm anh và thương anh nhiều đến vậy.</p>
+            <p>Tuổi mới rồi, chỉ mong em luôn bình an, làm điều mình thích và lúc nào cũng cảm thấy mình được yêu thương thật nhiều.</p>
+            <p>Happy Birthday người anh thương 💕 🎂</p>
+          </div>
+
+          <div class="date-stamp">
+            Happy Birthday!<br />
+            17 - 05 - 2026
+          </div>
+        </article>
+
+        <div class="polaroids" aria-label="Ảnh dưới thư có thể mở">
+          <button class="polaroid one" type="button" data-full="assets/anh-1.jpg"><img src="assets/anh-1.jpg" alt="Ảnh 1" /></button>
+          <button class="polaroid two" type="button" data-full="assets/anh-2.jpg"><img src="assets/anh-2.jpg" alt="Ảnh 2" /></button>
+          <button class="polaroid three" type="button" data-full="assets/anh-3.jpg"><img src="assets/anh-3.jpg" alt="Ảnh 3" /></button>
+        </div>
+      </section>
+
+      <section class="scene scene-envelope" aria-label="Cảnh 4 - Bấm để mở lại thư">
+        <div class="soft-cloud cloud-one"></div>
+        <div class="soft-cloud cloud-two"></div>
+        <div class="soft-cloud cloud-three"></div>
+        <div class="floating-hearts" aria-hidden="true"></div>
+
+        <button class="envelope-button" type="button" aria-label="Chạm để mở lại thư">
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front"></span>
+        </button>
+
+        <p class="tap-text envelope-text">Chạm để mở lại thư</p>
+
+        <div class="balloon-photo photo-a"><img src="assets/anh-4.jpg" alt="" /></div>
+        <div class="balloon-photo photo-b"><img src="assets/anh-5.jpg" alt="" /></div>
+        <div class="balloon-photo photo-c"><img src="assets/anh-6.jpg" alt="" /></div>
+      </section>
+    </main>
+
+    <dialog class="photo-dialog">
+      <button class="close-photo" type="button" aria-label="Đóng ảnh">×</button>
+      <img src="" alt="Ảnh được mở" />
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
